@@ -29,6 +29,12 @@
         <property name="persistenceUnitName" value="wegrowPU"/>
     </bean>
 
+    <bean id="transactionManager"
+            class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    
+
 
     <context:component-scan base-package="ma.wegrow.service"/>
 
