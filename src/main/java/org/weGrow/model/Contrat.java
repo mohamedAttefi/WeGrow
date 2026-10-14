@@ -1,4 +1,7 @@
 package org.weGrow.model;
 
-public class Contrat {
+public enum Contrat {
+    CDI,
+    CDD,
+    STAGE
 }
