@@ -33,6 +33,26 @@
             class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
+
+    <bean id="departementRepository"
+          class="org.weGrow.repository.DepartementRepositoryImpl"/>
+
+
+    <bean id="employeRepository"
+          class="org.weGrow.repository.EmployeRepositoryImpl"/>
+
+    <bean id="departementService" 
+          class="org.weGrow.service.DepartementService">
+        <property name="departementRepository"
+                  ref="departementRepository"/>
+    </bean>
+
+    <bean id="employeService"
+          class="org.weGrow.service.EmployeService">
+        <property name="employeRepository"
+                  ref="employeRepository"/>
+
+    </bean>
     
 
 
